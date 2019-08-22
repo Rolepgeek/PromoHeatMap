@@ -7,12 +7,12 @@ import sys
 
 if __name__ == '__main__':
     # establishing some base level args
-    XL_Name = r"C:\Users\rolep\Documents\Naithani Lab\tiss_table_baseline_SDRLK.csv"
+    XL_Name = r"C:\Users\rolep\Documents\Naithani Lab\SDRLF_Expression_Data\tiss_table_baseline_SDRLK.csv"
     sys.argv = ['MultiCluster.py']
-    Basep1Flag = False
-    Log2p1Flag = False
-    Log2p2Flag = False
-    Corrp1Flag = True
+    Basep1Flag = True
+    Log2p1Flag = True
+    Log2p2Flag = True
+    Corrp1Flag = False
     Corrp2Flag = False
     metrix = 'correlation'
 
@@ -22,7 +22,9 @@ if __name__ == '__main__':
     XL_BaseTable.replace(to_replace=0, value=0.1, inplace=True)
     XL_Log2Table = np.log2(XL_BaseTable)
 
+    XL_BaseTable.replace(to_replace=0.1, value=0, inplace=True)
     XL_BaseTableNANless = XL_BaseTable.fillna(value=0)
+
     XL_Log2TableNANless = XL_Log2Table.fillna(value=-3)
 
     # grid_kws = {"height_ratios": (.9, .05), "hspace": .3}
