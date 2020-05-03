@@ -7,7 +7,7 @@ import sys
 
 if __name__ == '__main__':
     # establishing some base level args
-    XL_Name = r"C:\Users\rolep\Documents\Naithani Lab\SDRLF_Expression_Data\tiss_table_baseline_SDRLK.csv"
+    XL_Name = r"C:\Users\rolep\Documents\Naithani Lab\update-04-06-2020-Table-03-tissue_baseline_Expression_SDRLK_mod.csv"
     sys.argv = ['MultiCluster.py']
     Basep1Flag = True
     Log2p1Flag = True
@@ -69,7 +69,7 @@ if __name__ == '__main__':
         # locate colorbar ticks
         cax.xaxis.set_ticks_position('top')
         cax.set_label("TPM Values")'''
-        plt.savefig(f"BaseX_SDRLK_111_Express_{metrix}.png",
+        plt.savefig(f"BaseX_SDRLK_111+_Express_{metrix}.png",
                     bbox_inches='tight'
                     )
 
@@ -97,7 +97,7 @@ if __name__ == '__main__':
         # Log2X.ax_heatmap.set_xlabel("UniProt ID", fontsize=20)
         Log2X.ax_heatmap.set_xlabel("")
         Log2X.ax_heatmap.tick_params(axis="x", labelsize=8)
-        plt.savefig(f"Log2X_SDRLK_111_Express_{metrix}.png",
+        plt.savefig(f"Log2X_SDRLK_111+_Express_{metrix}.png",
                     bbox_inches='tight'
                     )
     if Log2p2Flag is True:
@@ -125,7 +125,7 @@ if __name__ == '__main__':
         # Log2X.ax_heatmap.set_xlabel("UniProt ID", fontsize=20)
         Log2X.ax_heatmap.set_xlabel("")
         Log2X.ax_heatmap.tick_params(axis="x", labelsize=8)
-        plt.savefig(f"Log2X_SDRLK_111_ClusTiss_{metrix}.png",
+        plt.savefig(f"Log2X_SDRLK_111+_ClusTiss_{metrix}.png",
                     bbox_inches='tight'
                     )
 
@@ -137,7 +137,7 @@ if __name__ == '__main__':
                             cmap='coolwarm',
                             # annot=True,
                             )
-        plt.savefig("CorrX_SDRLK_111_Tiss.png",
+        plt.savefig("CorrX_SDRLK_111+_Tiss.png",
                     bbox_inches='tight'
                     )
     if Corrp2Flag is True:
@@ -148,7 +148,7 @@ if __name__ == '__main__':
                             cmap='coolwarm',
                             # annot=True,
                             )
-        plt.savefig("CorrX_SDRLK_111_Express.png",
+        plt.savefig("CorrX_SDRLK_111+_Express.png",
                     bbox_inches='tight'
                     )
 
